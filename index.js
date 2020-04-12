@@ -28,3 +28,4 @@ return message.channel.send("hello")
 })
 })
 bot.login(botconfig.token);
+bot.login(process.env.token);
