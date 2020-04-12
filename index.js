@@ -11,7 +11,7 @@ bot.user.activity ("Xblokzz Bot Online", {type: "Streaming"});
 bot.on("message", async message => {
 if(message.author.bot || message.channel.type === "dm") return;
 
-let prefix = botconfig.prefix;
+let prefix = index.js.prefix;
 let messageArray = message.content.split(" ")
 let cmd = messageArray[0]
 let args = messageArray.slice[0]
@@ -19,7 +19,7 @@ let args = messageArray.slice[0]
 if(cmd === `${prefix}hello`){
 return message.channel.send("hello")
 
-
+const prefix = '!';
 
 }
 
@@ -28,4 +28,57 @@ return message.channel.send("hello")
 })
 })
 
-bot.login(process.env.token);
+const user = message.metions.users.first();
+
+const member = member.guild.member(user);
+
+if (member){
+    member.kick('You Were kicked!').then(()=>{
+message.reply(`Sucessfully Kicked ${user.tag}`);
+    }).catch(err =>{
+message.reply('I was Unable To Kick The Member');
+console.log(err);
+    });
+
+}  else{
+message.reply ("That User Isn\'t in the This guild")
+
+ }{
+
+    {
+
+
+
+
+
+
+}
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+bot.login(botconfig.token);
+
